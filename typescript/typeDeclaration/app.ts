@@ -13,5 +13,12 @@ function getStudentDetails (studentID: number): {
   subject: string;
   createdDate: Date;
 } {
-  return null;
+  return {
+    studentID: 12345,
+    studentName: 'Hanbin Lee',
+    age: 21,
+    gender: 'male',
+    subject: 'Javascript',
+    createdDate: new Date()
+  }
 }

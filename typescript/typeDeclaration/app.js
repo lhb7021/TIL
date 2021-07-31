@@ -5,5 +5,12 @@ var gender = 'male';
 var subject = 'Javascript';
 var courseCompleted = false;
 function getStudentDetails(studentID) {
-    return null;
+    return {
+        studentID: 12345,
+        studentName: 'Hanbin Lee',
+        age: 21,
+        gender: 'male',
+        subject: 'Javascript',
+        createdDate: new Date()
+    };
 }
