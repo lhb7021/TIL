@@ -11,9 +11,9 @@ let student = {
   }
 };
 
-student.name = 100;
+// student.name = 100;
 
 
-function calculateCodingIQ (lostPoints) {
-  return 100 - lostPoints;
-}
+// function calculateCodingIQ (lostPoints) {
+//   return 100 - lostPoints;
+// }

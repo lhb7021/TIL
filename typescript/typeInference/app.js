@@ -9,7 +9,7 @@ var student = {
         console.log('brain is working hard');
     }
 };
-student.name = 100;
+// student.name = 100;
 function calculateCodingIQ(lostPoints) {
     return 100 - lostPoints;
 }
