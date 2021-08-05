@@ -10,6 +10,7 @@
 var Employee = /** @class */ (function () {
     function Employee() {
         var _this = this;
+        this.jobTitle = '주니어 개발자';
         this.printEmployeeDatails = function () {
             console.log(_this.fullName + "\uC758 \uC9C1\uC5C5\uC740 " + _this.jobTitle + " \uC774\uACE0 \uC77C\uC8FC\uC77C\uC758 \uC218\uC785\uC740 " + _this.hourlyRate * _this.workingHoursPerWeek + " \uB2EC\uB7EC \uC774\uB2E4.");
         };
@@ -19,7 +20,12 @@ var Employee = /** @class */ (function () {
 var employee1 = new Employee();
 employee1.fullName = 'Hanbin Lee';
 employee1.age = 21;
-employee1.jobTitle = '주니어 개발자';
 employee1.hourlyRate = 40;
 employee1.workingHoursPerWeek = 35;
 employee1.printEmployeeDatails();
+var employee2 = new Employee();
+employee2.fullName = 'Coding Kim';
+employee2.age = 23;
+employee2.hourlyRate = 40;
+employee2.workingHoursPerWeek = 40;
+employee2.printEmployeeDatails();

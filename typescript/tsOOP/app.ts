@@ -12,7 +12,7 @@
 class Employee {
   fullName: string;
   age: number;
-  jobTitle: string;
+  jobTitle = '주니어 개발자';
   hourlyRate: number;
   workingHoursPerWeek: number;
 
@@ -24,7 +24,13 @@ class Employee {
 let employee1 = new Employee();
 employee1.fullName = 'Hanbin Lee';
 employee1.age = 21;
-employee1.jobTitle = '주니어 개발자';
 employee1.hourlyRate = 40;
 employee1.workingHoursPerWeek = 35;
 employee1.printEmployeeDatails();
+
+let employee2 = new Employee();
+employee2.fullName = 'Coding Kim';
+employee2.age = 23;
+employee2.hourlyRate = 40;
+employee2.workingHoursPerWeek = 40;
+employee2.printEmployeeDatails();
