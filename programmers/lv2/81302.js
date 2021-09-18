@@ -85,26 +85,48 @@
 //   return result;
 // }
 
+// function solution(places) {
+//   return places.map((place) => {
+//     let covid = new Array(place.length).fill().map(() => new Array(place[0].length).fill(0));
+//     for(let i = 0; i < place.length; i++){
+//       for(let l = 0; l < place[i].length; l++){
+//         if(place[i][l] === 'P'){
+//           covid[i][l]--;
+//           if(i > 0) covid[i - 1][l]--;
+//           if(l + 1 < place[i].length) covid[i][l + 1]--;
+//           if(i + 1 < place.length) covid[i + 1][l]--;
+//           if(l > 0) covid[i][l - 1]--; 
+//         }
+//         if(place[i][l] === 'X') covid[i][l] += 3;
+//       }
+//     }
+//     return covid.filter((data) => data.includes(-2)).length ? 0 : 1;
+//   });
+// }
+
 function solution(places) {
-  return places.map((place) => {
-    let covid = new Array(place.length).fill().map(() => new Array(place[0].length).fill(0));
+  let search = [[-1, 0], [0, 1], [1, 0], [0, -1]];
+  const isCovid = (place) => {
+    let covid = new Array(place.length)
+    .fill().map(() => new Array(place[0].length).fill(0));
     for(let i = 0; i < place.length; i++){
       for(let l = 0; l < place[i].length; l++){
+        if(place[i][l] === 'X') covid[i][l] += 10;
         if(place[i][l] === 'P'){
           covid[i][l]--;
-          if(i > 0) covid[i - 1][l]--;
-          if(l + 1 < place[i].length) covid[i][l + 1]--;
-          if(i + 1 < place.length) covid[i + 1][l]--;
-          if(l > 0) covid[i][l - 1]--; 
+          for(let [a, b] of search){
+            if(i + a >= 0 && i + a < place.length && l + b >= 0 && l + b < place[i].length){
+              covid[i + a][l + b]--;
+            }
+          }
         }
-        if(place[i][l] === 'X') covid[i][l] += 3;
       }
     }
-    return covid.filter((data) => data.includes(-2)).length ? 0 : 1;
-  });
+    return covid.filter((el) => el.filter((data) => data < -1).length > 0).length ? 0 : 1;
+  };
+  return places.map((place) => isCovid(place));
 }
 
 let sample1 = [["POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"], ["POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"], ["PXOPX", "OXOXP", "OXPOX", "OXXOP", "PXPOX"], ["OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"], ["PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"]];
 
 console.log(solution(sample1)); // [1, 0, 1, 1, 1]
-
