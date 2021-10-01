@@ -1,5 +1,5 @@
-// 제목
-// 링크
+// 07_treeDFS
+// https://urclass.codestates.com/codeproblem/de9f2f61-4c8f-4c75-ba45-e70a2e48c4ef
 
 let dfs = function (node) {
   // TODO: 여기에 코드를 작성합니다.
@@ -21,7 +21,6 @@ Node.prototype.addChild = function (child) {
   this.children.push(child);
   return child;
 };
-
 
 let root = new Node(1);
 let rootChild1 = root.addChild(new Node(2));
