@@ -8,17 +8,19 @@ const balancedBrackets = function (str) {
     "{": "}",
     "[": "]",
   };
+  const opener = Object.keys(table);
+  const closer = Object.values(table);
   let stack = [];
   for(let i = 0; i < str.length; i++){
-    if(Object.keys(table).includes(str[i])) stack.push(str[i]);
-    if(Object.values(table).includes(str[i])){
-      if(!stack.length || str[i] !== table[stack[stack.length - 1]]) return false;
-      stack.pop();
+    if(opener.includes(str[i])) stack.push(str[i]);
+    if(closer.includes(str[i])){
+      let pair = stack.pop();
+      if(str[i] !== table[pair]) return false;
     }
   }
-  if(stack.length) return false;
-  return true;
+  return stack.length === 0;
 };
+
 
 let sample1 = ["("];
 let sample2 = ["()"];
