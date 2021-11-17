@@ -186,3 +186,312 @@ print(name + "는 어른일까요? " + str(is_adult))
 # print("{0} 의 비밀번호는 {1} 입니다.".format(quiz, answer3))
 # print(f"{quiz} 의 비밀번호는 {answer3} 입니다.")
 # print("{a} 의 비밀번호는 {b} 입니다.".format(a = quiz, b = answer3))
+
+
+# people1 = 10
+# people2 = 20
+# people3 = 30
+# subway1 = [40, 50, 60]
+# print(subway1)
+# subway2 = [people1, people2, people3]
+# print(subway2)
+# print(subway2.index(people3))
+
+# subway2.append(40)
+# print(subway2)
+
+# subway2.insert(1, 50)
+# print(subway2)
+
+# print(subway2.pop())
+# print(subway2)
+
+# print(subway2.count(10))
+
+# num_list = [5,2,4,3,1]
+# num_list.sort()
+# print(num_list)
+
+# num_list.reverse()
+# print(num_list)
+
+# num_list.clear()
+# print(num_list)
+
+# num_list = [5,2,4,3,1]
+# mix_list = ["조세호", 20, True]
+# print(mix_list)
+
+# num_list.extend(mix_list)
+# print(num_list)
+
+
+# cabinet = {3:"유재석", 100:"김태호"}
+# print(cabinet[3])
+# print(cabinet[100])
+
+# print(cabinet.get(3))
+# print(cabinet.get(5, "사용 가능"))
+
+# print(3 in cabinet)
+# print(5 in cabinet)
+
+# cabinet = {"A-3":"유재석", "B-100":"김태호"}
+# print(cabinet["A-3"])
+# print(cabinet["B-100"])
+
+# print(cabinet)
+# cabinet["A-3"] = "김종국"
+# cabinet["C-20"] = "조세호"
+# print(cabinet)
+
+# del cabinet["A-3"]
+# print(cabinet)
+
+# print(cabinet.keys())
+# print(cabinet.values())
+# print(cabinet.items())
+
+# cabinet.clear()
+# print(cabinet)
+
+# menu = ("돈까스", "치즈까스")
+# print(menu[0])
+# print(menu[1])
+
+# menu.add("생선까스") # err
+
+# name = "김종국"
+# age = 20
+# hobby = "코딩"
+# print(name, age, hobby)
+
+# (name, age, hobby) = ("김종국", 20, "코딩")
+# print(name, age, hobby)
+# name = "유재석"
+# print(name)
+
+
+# my_set = {1,2,3,3,3}
+# print(my_set)
+
+# java = {"유재석", "김태호", "양세형"}
+# python = set(["유재석", "박명수"])
+
+# print(java & python)
+# print(java.intersection(python))
+
+# print(java | python)
+# print(java.union(python))
+
+# print(java - python)
+# print(java.difference(python))
+
+# python.add("김태호")
+# print(python)
+
+# java.remove("김태호")
+# print(java)
+
+
+# menu = {"커피", "우유", "주스"}
+# print(menu, type(menu))
+
+# menu = list(menu)
+# print(menu, type(menu))
+
+# menu = tuple(menu)
+# print(menu, type(menu))
+
+# menu = set(menu)
+# print(menu, type(menu))
+
+
+# from random import *
+# lst = [1,2,3,4,5]
+# print(lst)
+# shuffle(lst)
+# print(lst)
+# print(sample(lst, 1))
+
+# lst = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+# x = sample(lst,  4)
+# y = sample(x, 1)
+# x.remove(y[0])
+# print(x)
+# print(y)
+
+
+# users = range(1, 21)
+# print(type(users))
+# users = list(users)
+# print(type(users))
+# print(users)
+
+# shuffle(users)
+# print(users)
+
+# winners = sample(users, 4)
+
+# print(" -- 당첨자 발표 -- ")
+# print("치킨 당첨자 : {0}".format(winners[0]))
+# print("커피 당첨자 : {0}".format(winners[1:]))
+# print(" -- 축하합니다 -- ")
+
+
+# weather = input("오늘 날씨는 어때요? ")
+# if weather == "비" or weather == "눈":
+#   print("우산을 챙기세요")
+# elif weather == "미세먼지":
+#   print("마스크를 챙기세요.")
+# else:
+#   print("날씨 맑음.")
+
+# temp = int(input("기온은 어때요? "))
+# if 30 <= temp:
+#   print("너무 더워요. 나가지 마세요.")
+# elif 10 <= temp and temp < 30:
+#   print("괜찮은 날씨에요.")
+# elif 0 <= temp < 10:
+#   print("외투를 챙기세요.")
+# else:
+#   print("너무 추워요. 나가지 마세요.")
+
+
+# print("대기번호 : 1")
+# print("대기번호 : 2")
+# print("대기번호 : 3")
+# print("대기번호 : 4")
+
+# for waiting_no in range(1, 6):
+#   print("대기번호 : {0}".format(waiting_no))
+
+# starbucks = ["아이언맨", "토르", "아이엠 그루트"]
+# for customer in starbucks:
+#   print("{0}, 커피가 준비되었습니다.".format(customer))
+
+
+# customer = "토르"
+# index = 5
+# while index >= 1:
+#   print("{0}, 커피가 준비 되었습니다. {1} 번 남았어요.".format(customer, index))
+#   index -= 1
+#   if index == 0:
+#     print("커피는 폐기처분되었습니다.")
+
+# customer = "아이언맨"
+# index = 1
+# while True:
+#   print("{0}, 커피가 준비 되었습니다. 호출 {1} 회".format(customer, index))
+#   index += 1
+
+# customer = "토르"
+# person = "Unknown"
+# while person != customer:
+#   print("{0}, 커피가 준비 되었습니다.".format(customer))
+#   person = input("이름이 어떻게 되세요? ")
+
+# absent = [2, 5] # 결석
+# no_book = [7] # 책 미지참
+# for student in range(1, 11):
+#   if student in absent:
+#     continue
+#   if student in no_book:
+#     print("오늘 수업 여기까지. {0}는 교무실로 따라와.".format(student))
+#     break
+#   print("{0}, 책을 읽어봐".format(student))
+
+
+# students = [1,2,3,4,5]
+# print(students)
+# students = [i+100 for i in students]
+# print(students)
+
+# students = ["Iron man", "Thor", "I am groot"]
+# students = [len(i) for i in students]
+# print(students)
+
+# students = ["Iron man", "Thor", "I am groot"]
+# students = [i.upper() for i in students]
+# print(students)
+
+# from random import *
+# guests = range(50)
+# # guests = [randrange(5, 51) for i in guest]
+# guests = [randint(5, 50) for i in guests]
+# count = 1
+# for boarder in guests:
+#   if 5 <= boarder <= 15:
+#     print("{0}번째 손님 (소요시간 : {1}분)".format(count, boarder))
+#   count += 1
+
+# from random import *
+# count = 0
+# for i in range(1, 51):
+#   time = randrange(5, 51)
+#   if 5 <= time <= 15:
+#     print("[O] {0}번째 손님 (소요시간 : {1}분)".format(i, time))
+#     count += 1
+#   else:
+#     print("[ ] {0}번째 손님 (소요시간 : {1}분)".format(i, time))
+# print("총 탑승 승객 : {0}분".format(count))
+
+
+# def open_account():
+#   print("새로운 계좌가 생성되었습니다.")
+
+# def deposit(balance, money):
+#   print("입금이 완료되었습니다. 잔액은 {0} 원입니다.".format(balance + money))
+#   return balance + money
+
+# def withdraw(balance, money):
+#   if balance >= money:
+#     print("출금이 완료되었습니다. 잔액은 {0} 원입니다.".format(balance - money))
+#     return balance - money
+#   else:
+#     print("출금이 완료되지 않았습니다. 잔액은 {0} 원입니다.".format(balance))
+#     return balance
+
+# def withdraw_night(balance, money):
+#   commission = 100
+#   return commission, balance - money - commission
+
+# balance = 0
+# balance = deposit(balance, 1000)
+# # balance = withdraw(balance, 500)
+# commission, balance = withdraw_night(balance, 500)
+# print("수수료는 {0} 원이며, 잔액은 {1} 원입니다.".format(commission, balance))
+
+
+# def profile(name, age, main_lang):
+#   print("이름 : {0}\t나이 : {1}\t주 사용 언어: {2}" \
+#     .format(name, age, main_lang))
+
+# profile("유재석", 20, "파이썬")
+# profile("김태호", 25, "자바")
+
+# def profile(name, age=17, main_lang="파이썬"):
+#   print("이름 : {0}\t나이 : {1}\t주 사용 언어: {2}" \
+#     .format(name, age, main_lang))
+
+# profile("유재석")
+# profile("김태호")
+
+
+# def profile(name, age, lang1, lang2, lang3, lang4):
+#   print("이름 : {0}\t나이 : {1}\t".format(name, age), end=" ")
+#   print(lang1, lang2, lang3, lang4)
+
+# profile("유재석", 20, "Python", "Java", "C", "C#")
+# profile("김태호", 25, "Kotlin", "Swift", "", "")
+
+# def profile(name, age, *language):
+#   print("이름 : {0}\t나이 : {1}\t".format(name, age), end=" ")
+#   for lang in language:
+#     print(lang, end=" ")
+#   print()
+
+# profile("유재석", 20, "Python", "Java", "C", "C#")
+# profile("김태호", 25, "Kotlin", "Swift")
+
+
