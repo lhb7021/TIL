@@ -15,3 +15,6 @@ elif 0 <= temp < 10:
   print("외투를 챙기세요.")
 else:
   print("너무 추워요. 나가지 마세요.")
+
+color = int(input("5 이하의 숫자를 입력해주세요. "))
+print(True if color <= 5 else False)
