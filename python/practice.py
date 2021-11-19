@@ -508,7 +508,7 @@ print(name + "는 어른일까요? " + str(is_adult))
 #   return gun
 
 # print("전체 총 : {0}".format(gun))
-# # checkpoint(2)
+# checkpoint(2)
 # gun = checkpoint_ret(gun, 2)
 # print("남은 총 : {0}".format(gun))
 
